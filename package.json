@@ -1,0 +1,34 @@
+{
+  "name": "comment-filter-search",
+  "displayName": "Comment Filter Search",
+  "description": "Filters out comment lines from search results when enabled.",
+  "version": "0.0.1",
+  "publisher": "example",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Comment Filter Search",
+      "properties": {
+        "commentFilterSearch.enabled": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable filtering of comment lines in search results"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node ./test/test.js"
+  },
+  "dependencies": {
+    "@types/node": "^24.1.0",
+    "vscode": "^1.1.37",
+    "vscode-ripgrep": "^1.13.2"
+  }
+}
